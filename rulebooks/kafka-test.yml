@@ -4,7 +4,7 @@
 
   sources:
     - name: kafka
-      kafka: 
+      ansible.eda.kafka: 
         topic: rhel_messages
         host: 3.13.51.242
         port: 9092
