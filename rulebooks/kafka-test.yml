@@ -12,6 +12,6 @@
   
   rules:
     - name: Print event
-      condition: event.body.i is defined
+      condition: event is defined
       action:
         debug:
