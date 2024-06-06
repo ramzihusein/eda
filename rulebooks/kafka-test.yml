@@ -1,0 +1,17 @@
+---
+- name: test kafka source plugin
+  hosts: all
+
+  sources:
+    - name: kafka
+      kafka: 
+        topic: rhel_messages
+        host: 3.13.51.242
+        port: 9092
+        group_id: aap
+  
+    - rules:
+        - name: Print event
+          condition: event.body.i is defined
+          action:
+            debug:
