@@ -10,8 +10,8 @@
         port: 9092
         group_id: aap
   
-    - rules:
-        - name: Print event
-          condition: event.body.i is defined
-          action:
-            debug:
+  rules:
+    - name: Print event
+      condition: event.body.i is defined
+      action:
+        debug:
