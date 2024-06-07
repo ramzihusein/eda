@@ -1,6 +1,6 @@
 ---
 - name: restart httpd
-  hosts: https://web3.ramzidev.com
+  hosts: web3
   gather_facts: false
 
   tasks:
