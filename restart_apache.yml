@@ -1,0 +1,11 @@
+---
+- name: restart httpd
+  hosts: https://web3.ramzidev.com
+  gather_facts: false
+
+  tasks:
+
+    - name: restart httpd
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
