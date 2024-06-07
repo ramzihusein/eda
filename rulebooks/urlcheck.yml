@@ -13,5 +13,5 @@
       condition: event.url_check.status == 'down'
       action:
         debug:
-          msg: "{{ event.url_check.url | regex_search('(?:http[s]*\\:\/\/)*(.*?)\\.(?=[^\/]*\\..{2,5})', '\\1') }}"
+          msg: "{{ event.url_check.url | ansible.builtin.regex_search('(?:http[s]*\\:\/\/)*(.*?)\\.(?=[^\/]*\\..{2,5})', '\\1') }}"
       
