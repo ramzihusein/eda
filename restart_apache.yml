@@ -1,6 +1,6 @@
 ---
 - name: restart httpd
-  hosts: web3
+  hosts: "{{ server }}"
   gather_facts: false
 
   tasks:

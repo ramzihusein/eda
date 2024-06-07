@@ -15,5 +15,8 @@
         run_job_template:
           name: restart_httpd
           organization: Default
+          job_args:
+            extra_vars:
+              server: "{{ event.url_check.url | regex_search('(?:http[s]*\:\/\/)*(.*?)\.(?=[^\/]*\..{2,5})', '\\1') | first }}"
 
       
