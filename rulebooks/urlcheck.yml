@@ -13,5 +13,4 @@
       condition: event.url_check.status == 'down'
       action:
         debug:
-          var:  event.url_check.url.split('\\')
-      
+          msg: "{{ event.url_check.url }}"     
