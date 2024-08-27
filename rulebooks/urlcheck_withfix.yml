@@ -1,0 +1,21 @@
+---
+- name: Check webserver status
+  hosts: all
+
+  sources:
+    - ansible.eda.url_check:
+        urls:
+          - https://web3.ramzidev.com
+        delay: 10
+  
+  rules:
+    - name: Site down
+      condition: event.url_check.status == 'down'
+      action:
+        run_job_template:
+          name: restart_httpd
+          organization: Default
+          job_args:
+          -  server: "{{ event.url_check.url.split('//')[1].split('.')[0] }}"
+       
+        
