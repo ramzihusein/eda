@@ -1,6 +1,6 @@
 ---
 - name: restart httpd
-  hosts: "{{ server }}".ramzidev.com
+  hosts: "{{ server }}"
   gather_facts: false
 
   tasks:
