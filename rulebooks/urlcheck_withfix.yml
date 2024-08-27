@@ -16,6 +16,6 @@
           name: restart_httpd
           organization: Default
           job_args:
-          -  server: "{{ event.url_check.url.split('//')[1].split('.')[0] }}"
+            server: "{{ event.url_check.url.split('//')[1].split('.')[0] }}"
        
         
