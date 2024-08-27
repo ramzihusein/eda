@@ -15,7 +15,7 @@
         run_job_template:
           name: restart_httpd
           organization: Default
-          extra_vars::
+          extra_vars:
             server: "{{ event.url_check.url.split('//')[1].split('.')[0] }}"
        
         
